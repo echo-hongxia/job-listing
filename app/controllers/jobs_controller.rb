@@ -13,6 +13,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.is_hidden_1 = false
     if @job.save
       redirect_to jobs_path
     else
