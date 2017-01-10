@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
 
-  before_action :authenticate_user! , only: [:new,:create,:update,:edit,:destroy]
+  before_filter :authenticate_user! , only: [:new,:create,:update,:edit,:destroy]
 
   def index
      @jobs = Job.where(:is_hidden_1 => false ).order("created_at DESC")
@@ -13,7 +13,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    @job.is_hidden_1 = false
+  
     if @job.save
       redirect_to jobs_path
     else
@@ -46,7 +46,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     @job.destroy
     flash[:alert] = "Job deleted!"
-    redirect_to jobs_path
+    redirect_to root_path
 
   end
 

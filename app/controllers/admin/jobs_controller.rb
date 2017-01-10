@@ -13,18 +13,18 @@ class Admin::JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-      if @job.is_hidden_1
-        flash[:warning] = "This Job public test"
-        @job.is_hidden_1 = false
-        @job.save
-        redirect_to  admin_jobs_path
-      else
-        flash[:warning] = "This Job hide test"
-        @job.is_hidden_1 = true
-        @job.save
-        redirect_to  admin_jobs_path
+    #  if @job.is_hidden_1
 
-      end
+    #    @job.is_hidden_1 = false
+    #    @job.save
+    #    redirect_to  admin_jobs_path
+    #  else
+
+    #    @job.is_hidden_1 = true
+    #    @job.save
+    #    redirect_to  admin_jobs_path
+
+    #  end
   end
 
   def create
@@ -65,11 +65,19 @@ class Admin::JobsController < ApplicationController
     @job = Job.find([params[:id]])
     flash[:alert] = "Job public test!"
 
-    @job.is_hidden_1 = false
-    @job.save
+  #  @job.is_hidden_1 = false
+  #  @job.save
 
 
     redirect_to admin_jobs_path
+  end
+
+  def pubtest
+    @job = Job.find([params[:id]])
+    @job.is_hidden_1 = false
+    @job.save
+    redirect_to root_path
+
   end
 
   def hide
