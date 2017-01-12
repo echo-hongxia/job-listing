@@ -4,22 +4,9 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+第二周作业 1st time created_at 2017-1-11
+version-2.6
+  在version-2.5上增加功能
+  1、首页要可以按照职缺薪资下限排序
+  2、首页要可以按照职缺薪资上限排序
+  3、首页要可以按照职缺发表时间排序
