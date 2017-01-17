@@ -3,7 +3,7 @@
 
 
 <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1" >
-  <ul class="nav navbar-nav navbar-right">
+  <!--<ul class="nav navbar-nav navbar-right">
         <li class="dropdown clearfix pull-right">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             排序
@@ -17,25 +17,25 @@
           </ul>
         </li>
 
-  </ul>
+  </ul>  -->
 
 
   <span class="pull-right">
 
     <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
-    <%= link_to("Hot job","#",:class => "btn btn-default")%>
+
 
   </span>
 </div>
 
-<div class="row">
-  <div class="col-sm-7 col-lg-offset-2">
-    <form accept-charset="UTF-8" action="/jobs/search" class="jobs-search-form" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-      <div class="input-group">
-        <input type="text" class="form-control" name="q" value="" placeholder="搜尋工作關鍵字...">
 
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-default">
+<div class="row">
+  <div class="col-sm-8 col-lg-8 col-lg-offset-3">
+    <form accept-charset="UTF-8" action="/jobs/search" class="jobs-search-form" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+      <div class="input-group" >
+        <input type="text" class="form-control" name="q" value="" placeholder="搜索职位名／公司名...">
+        <span class="input-group-btn" >
+          <button type="submit" class="btn btn-default" style="margin-left: 5px">
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
@@ -43,22 +43,42 @@
     </form>
   </div>
 
-  <div class="col-sm-1 ">
-    <a class="btn btn-primary btn-block " data-remote="true" href="#" id="post-new-job-link">搜索</a>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-10 col-lg-offset-2">
+
+    <input type="text" name="q" value="" placeholder="搜索职位名／公司名...">
+
+    <span>
+      <button type="submit" class="btn btn-default" style="margin-left: 5px">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+    </span>
+
+    <input type="text" name="q" value="" placeholder="搜索职位名／公司名...">
+
   </div>
 
-
+  <div class="col-sm-1 ">
+    <a class="btn btn-primary btn-block " data-remote="true" href="#" id="post-new-job-link">搜索</a>
+  </div >
 
 </div>
-<div >
-  <%= link_to("最新职位","#",:class => "btn btn-default" ) %>
-  <%= link_to("热门职位","#",:class => "btn btn-default")%>
-  <%= link_to("按薪资下限排序",jobs_path(:order => "by_lower_bound"),:class => "btn btn-default")%>
-  <%= link_to("按薪资上限排序",jobs_path(:order => "by_upper_bound"),:class => "btn btn-default")%>
-  <%= link_to("按发表时间排序",jobs_path,:class => "btn btn-default")%>
+
+
+<div style="margin: 5% 0 0;">
+  <%= link_to("最新职位","#",:class => "btn btn-success" ) %>
+  <%= link_to("热门职位","#",:class => "btn btn-danger")%>
+  <%= link_to("按薪资下限排序",jobs_path(:order => "by_lower_bound"),:class => "btn btn-warning")%>
+  <%= link_to("按薪资上限排序",jobs_path(:order => "by_upper_bound"),:class => "btn btn-primary")%>
+  <%= link_to("按发表时间排序",jobs_path,:class => "btn btn-info")%>
 </div>
 
-<table class="table table-boldered table-striped custab ">
+<table class="table table-boldered table-striped custab " style="margin: 1px">
   <thead>
     <tr>
       <td> 职位名  </td>
@@ -99,3 +119,19 @@
   <% end %>
 </tbody>
 </table>
+
+<div class="text-center">
+
+  <ul class="pagination" >
+    <li class=""><a href="#">Previous</a></li>
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+      <li><a href="#">Next</a></li>
+  </ul>
+
+</div>

@@ -179,3 +179,24 @@ btn-lg, .btn-group-lg > .btn {
     border-radius: 3px;//btn圆角
     width: 200px;//这里用指定宽度把btn拉得更长
 }
+
+.tHeader {
+    margin-bottom: 10px;
+    background-color: #F9F9F9;
+    border: 1px solid #EEE;
+}
+
+.tHeader .op{
+    float: right;
+    width: 225px;
+    text-align: center;
+    padding: 0 20px;
+    display: block;
+}
+
+.tHeader .in {
+    position: relative;
+    width: 970px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}

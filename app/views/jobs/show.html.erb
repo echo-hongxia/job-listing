@@ -2,7 +2,58 @@
 <p>
   <%= simple_format(@job.description)%>
 </p>
+<style>
+.container-fluid { padding:0; margin: 0 auto; width:1000px;}
+</style>
+<div>
+    <ul>
+      <li> <%=  @job.company %></li>
+      <li> <%=  @job.wage_lower_bound %></li>
+      <li> <%=  @job.wage_upper_bound %></li>
+      <li> <%=  @job.company %></li>
+      <li> <%=  @job.contact_email%></li>
+      <li> <%=  @job.created_at%></li>
+
+    </ul>
+</div>
 <div class="text-center">
   <%= link_to("投交履历",new_job_resume_path(@job),:style => "font-size: 30px; text-decoration: underline;") %>
 
+</div>
+
+
+<div class="in">
+		<div class="cn">
+			<h1 ><%= @job.title%><input value="84430708" name="hidJobID" id="hidJobID" type="hidden" jt="0"><input value="jobs" name="hidHost" id="hidHost" type="hidden"></h1>
+
+			<strong><%= @job.wage_lower_bound %> - <%= @job.wage_upper_bound %></strong>
+			<p class="cname">
+				<a href="#" target="_blank" title="上海麦开信息科技有限公司"> <%=@job.company %><em class="icon_b i_link"></em></a>
+			</p>
+		</div>
+		<div class="op">
+			<a class="but_sq" id="app_ck" href="javascript:void(0);" onclick="delivery('hidJobID','1','http://my.51job.com/','c','search.51job.com','01','01','http://img06.51jobcdn.com/');return false;"><img width="22" height="22" src="http://img06.51jobcdn.com/im/jobs/but_img_sq.png" alt="">申请职位</a>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+
+
+  <div class="tHeader tHjob">
+	<div class="in">
+		<div class="cn">
+			<h1 title="WEB前端开发/前端工程师/程序员"><%= @job.title%><input value="84430708" name="hidJobID" id="hidJobID" type="hidden" jt="0"><input value="jobs" name="hidHost" id="hidHost" type="hidden"></h1>
+			<span class="lname">工作地点：<%= @job.place %></span>
+			<strong>¥<%= @job.wage_lower_bound %> - ¥<%= @job.wage_upper_bound %></strong>
+			<p class="cname">
+				<a href="http://jobs.51job.com/all/co3610285.html" target="_blank" ><%= @job.company%><em class="icon_b i_link"></em></a>
+			</p>
+
+		</div>
+		<div class="op">
+			<a class="but_sq" id="app_ck" href="javascript:void(0);" onclick="delivery('hidJobID','1','http://my.51job.com/','c','search.51job.com','01','01','http://img06.51jobcdn.com/');return false;"><img width="22" height="22" src="http://img06.51jobcdn.com/im/jobs/but_img_sq.png" alt="">申请职位</a>
+
+		</div>
+		<div class="clear"></div>
+	</div>
 </div>

@@ -20,15 +20,43 @@
            <div >
 
              <div class="col-md-2">
-                <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
 
-                <li class="active">
-                <%= link_to("Admin Panel", admin_jobs_path ) %>
-                <br>
-                <%= link_to("Back to Job Panel",jobs_path)  %>
-                </li>
+                <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
+                  <li><i class="glyphicon glyphicon-home"></i>
+                       <small><b>后台管理</b></small>
+                   </li>
+                   <li class="active">
+                        <%= link_to("首页", admin_jobs_path ) %>
+                   </li>
+                   <li>
+                        <%= link_to("新增职位",new_admin_job_path) %>
+                        <%= link_to("搜索职位",jobs_path)  %>
+                   </li>
 
                 </ul>
+                <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
+                  <li><i class="glyphicon glyphicon-list-alt"></i>
+                       <small><b>去前台</b></small>
+                  </li>
+                  <li class="active">
+                      <%= link_to("查看职位",jobs_path) %>
+                  </li>
+                  <li>
+                    <%= link_to("Search",new_admin_job_path) %>
+                  </li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
+                  <li><i class="glyphicon glyphicon-user"></i>
+                       <small><b>用户管理</b></small>
+                  </li>
+                  <li class="active">
+                      <%= link_to("应聘者管理",jobs_path) %>
+                  </li>
+                  <li>
+                    <%= link_to("企业管理",new_admin_job_path) %>
+                  </li>
+                </ul>
+
              </div>
 
               <div class="col-md-10">
