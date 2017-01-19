@@ -6,15 +6,23 @@
     <div class="navbar-header">
       <!--<a class="navbar-brand" href="/">Job Listing 2nd week  </a> -->
       <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden= "true"> </i>28K Offer </a>
-    
+
+      <a class="navbar-brand" href="/jobs"> 首页 </a>
+      <a class="navbar-brand" href="/jobs"> 职位搜索 </a>
+      <a class="navbar-brand" href="/jobs/new" > 发布职位 </a>
+      <a class="navbar-brand" href="/jobs/new" > 关于28K Offer </a>
+
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
       <ul class="nav navbar-nav navbar-right">
         <li>
 
           <% if !current_user %>
-            <li> <%= link_to("注册",new_user_registration_path) %></li>
-            <li> <%= link_to("登录",new_user_session_path) %></li>
+
+            <li><a href="/users/sign_up"> <span class="glyphicon glyphicon-user"></span>注册</a></li>
+            <li><a href="/users/sign_in"> <span class="glyphicon glyphicon-user"></span>登录</a></li>
+            
+
           <% else %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
