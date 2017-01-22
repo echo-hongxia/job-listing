@@ -5,12 +5,12 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <!--<a class="navbar-brand" href="/">Job Listing 2nd week  </a> -->
-      <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden= "true"> </i>28K Offer </a>
+      <a class="navbar-brand" href="/"><i class="fa fa-flash" aria-hidden= "true"> </i>秒聘网 </a>
 
-      <a class="navbar-brand" href="/jobs"> 首页 </a>
+      <a class="navbar-brand" href="/"> 首页 </a>
       <a class="navbar-brand" href="/jobs"> 职位搜索 </a>
       <a class="navbar-brand" href="/jobs/new" > 发布职位 </a>
-      <a class="navbar-brand" href="/jobs/new" > 关于28K Offer </a>
+      <a class="navbar-brand" href="#" > 关于秒聘网 </a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
@@ -19,9 +19,19 @@
 
           <% if !current_user %>
 
-            <li><a href="/users/sign_up"> <span class="glyphicon glyphicon-user"></span>注册</a></li>
-            <li><a href="/users/sign_in"> <span class="glyphicon glyphicon-user"></span>登录</a></li>
-            
+            <li>
+              <a href="/users/sign_up">
+                <span class="glyphicon glyphicon-user" style="margin-right:3px;"></span>
+                注册
+              </a>
+            </li>
+            <li>
+              <a href="/users/sign_in">
+                <span class="glyphicon glyphicon-log-in" style="margin-right:3px"></span>
+                登录
+              </a>
+            </li>
+
 
           <% else %>
             <li class="dropdown">

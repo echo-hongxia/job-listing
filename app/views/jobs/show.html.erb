@@ -13,18 +13,30 @@
         </div>
 
         <div class="col-md-2" style="margin-top: 30px">
-          <button class="btn  btn-danger" type="button"> <%= link_to("申请职位",new_job_resume_path(@job),:style => "font-size: 20px;color: #FFFFFF ") %> <i class="fa fa-long-arrow-right"> </i> </button>
+          <button class="btn  btn-danger" type="button"> <%= link_to("申请职位",new_job_resume_path(@job),:style => "font-size: 20px;color: #FFFFFF ") %> <i class="fa fa-heart-o"> </i> </button>
         </div>
 	</div>
 
   <div class="row">
 
+    <div class="col-md-12" >
+      <h3 class="job_h3" ">
+         </i>职位描述:
+      </h3>
+      <p>
+          <%= simple_format(@job.description) %>
+      </p>
+    </div>
+
     <div class="col-md-12">
       <h3 class="job_h3">
-         职位描述
-      </h3><pre>
-      <%= @job.description %>
-    </pre>
+         联系方式:
+      </h3>
+      <p>
+          <%= simple_format(@job.contact_email) %>
+
+      </p>
     </div>
+
   </div>
 </div>

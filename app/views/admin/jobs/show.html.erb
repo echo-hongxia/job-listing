@@ -1,4 +1,40 @@
-<h1> <%= @job.title %> </h1>
-<p>
-    <%= simple_format(@job.description) %>
-</p>
+
+  <div class="container">
+	   <div class="row">
+		     <div class="col-md-7">
+			        <h1 ><%= @job.title%></h1>
+			        <span class="cname">
+				            <a href="#" target="_blank" ><%= @job.company%><em class="icon_b i_link"></em></a>
+			        </span>
+              <span class="lname">工作地点：<%= @job.place %></span>
+		    </div>
+        <div class="col-md-3" style="margin-top: 20px;color: #212121">
+          <h3>¥<%= @job.wage_lower_bound %> - ¥<%= @job.wage_upper_bound %></h3>
+        </div>
+
+        
+	</div>
+
+  <div class="row">
+
+    <div class="col-md-12" >
+      <h3 class="job_h3" ">
+         </i>职位描述:
+      </h3>
+      <p>
+          <%= simple_format(@job.description) %>
+      </p>
+    </div>
+
+    <div class="col-md-12">
+      <h3 class="job_h3">
+         联系方式:
+      </h3>
+      <p>
+          <%= simple_format(@job.contact_email) %>
+
+      </p>
+    </div>
+
+  </div>
+</div>
